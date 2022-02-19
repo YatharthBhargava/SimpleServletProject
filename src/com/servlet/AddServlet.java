@@ -25,7 +25,9 @@ public class AddServlet extends HttpServlet{
 		Cookie cookie = new Cookie("k", (i+j) + "");
 		res.addCookie(cookie);
 		
-		RequestDispatcher rDispatcher = getServletContext().getRequestDispatcher("/sq");
-		rDispatcher.include(req, res);
+		res.sendRedirect("sq");
+		
+//		RequestDispatcher rDispatcher = getServletContext().getRequestDispatcher("/sq");
+//		rDispatcher.include(req, res);
 	}
 }
