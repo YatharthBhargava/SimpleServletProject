@@ -9,6 +9,7 @@ import jakarta.servlet.ServletRequest;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 public class AddServlet extends HttpServlet{
 	
@@ -19,7 +20,9 @@ public class AddServlet extends HttpServlet{
 		PrintWriter out = res.getWriter();
 		out.println("result is " + (i + j));
 		
-		req.setAttribute("k", i+j);
+		
+		HttpSession session = req.getSession();
+		session.setAttribute("k", i+j);
 		
 		RequestDispatcher rDispatcher = getServletContext().getRequestDispatcher("/sq");
 		rDispatcher.include(req, res);
