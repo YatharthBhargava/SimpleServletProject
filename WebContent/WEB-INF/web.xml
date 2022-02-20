@@ -19,4 +19,25 @@
 	<servlet-name>Servlet2</servlet-name>
 	<url-pattern>/sq</url-pattern>
 </servlet-mapping>
+
+
+<servlet>
+	<servlet-name>Servlet3</servlet-name>
+	<servlet-class>com.servlet.MyServletContextAndConfig</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>Servlet3</servlet-name>
+	<url-pattern>/Context</url-pattern>
+</servlet-mapping>
+<context-param>
+	<param-name>name</param-name>
+	<param-value>Yatharth</param-value>
+</context-param>
+
+<context-param>
+	<param-name>Phone</param-name>
+	<param-value>Redmi</param-value>
+</context-param>
+
 </web-app>
