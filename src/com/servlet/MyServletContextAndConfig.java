@@ -3,6 +3,7 @@ package com.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -13,10 +14,10 @@ public class MyServletContextAndConfig extends HttpServlet{
 		PrintWriter out = response.getWriter();
 		out.print("Hi ");
 		
-		ServletContext context = getServletContext();
+		ServletConfig config = getServletConfig();
 //		ServletContext ctContext = request.getServletContext(); // we can also use this it is one and the same thing
 		
-		String name = context.getInitParameter("name");
+		String name = config.getInitParameter("name");
 		out.println(name);
 	}
 }

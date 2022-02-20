@@ -24,6 +24,11 @@
 <servlet>
 	<servlet-name>Servlet3</servlet-name>
 	<servlet-class>com.servlet.MyServletContextAndConfig</servlet-class>
+	
+	<init-param>
+		<param-name>name</param-name>
+		<param-value>Bhargava</param-value>
+	</init-param>
 </servlet>
 
 <servlet-mapping>
