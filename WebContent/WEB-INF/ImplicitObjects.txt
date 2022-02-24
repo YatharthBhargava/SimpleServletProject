@@ -1,0 +1,10 @@
+Builtin objects in JSP :
+Request
+Response
+PageContext
+Out ~ Printwriter object
+Session 
+Application ~ ServletContext
+Config ~ ServletConfig
+
+// Dont even need to instantiate anyone of these objects(in jsp) just directly refer them
